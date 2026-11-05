@@ -27,7 +27,7 @@ jobs:
           gradle-version: "8.14.3"
 
       - name: Unzip project
-        run: unzip -q phone-anc.zip
+        run: unzip -q phone-anc.zip && find phone-anc -exec touch {} +
 
       - name: Build debug APK
         working-directory: phone-anc
